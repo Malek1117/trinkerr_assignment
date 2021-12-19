@@ -5,7 +5,6 @@
 .main{
   border: 2px solid rgb(26,29,48);
   width: 35vw;
-  border-radius: 25px;
 }
 
 .search{
@@ -20,6 +19,10 @@
   color: rgb(26,29,48);
 }
 
+.search::placeholder{
+  color: rgb(26,29,48);
+}
+
 .search_data{
   width: 35vw;
   margin: auto;
@@ -27,8 +30,9 @@
   height: fit-content;
   font-size: 17px;
   max-height: 50vh;
-  border-end-end-radius: 25px;
-  border-end-start-radius: 25px;
+  position:absolute;
+  background-color:#45A3F7;
+  border-top: 1px solid white;
 }
 
 .search_data::-webkit-scrollbar{
@@ -38,7 +42,6 @@
 .search_data::-webkit-scrollbar-track{
   background-color:white;
   /* border: 1px solid black; */
-  border-end-end-radius: 30px;
 }
 
 .search_data::-webkit-scrollbar-thumb{
@@ -46,33 +49,32 @@
   border-radius: 25px;
 }
 
-.search_el{
+.element{
   color: white;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   padding: 10px 1vw;
 }
 
-.search_el+button{
-  position: relative;
-  top:100;
-  background-color:red;
+.element:hover{
+  background-color:#78bdfa;
 }
 
-.search_el:hover{
-  background-color:#45A3F7;
-}
-
-.search_el>div:nth-child(1){
+.element>div:nth-child(1){
   text-align: left;
 }
 
-.search_el>div:nth-child(2){
+.element>div:nth-child(1)>span{
+  font-size: 14px;
+  color: rgb(223, 219, 219);
+}
+
+.element>div:nth-child(2){
   text-align: right;
 }
 
-.search_el>div>p, .flex_div>div>p{
+.element>div>p, .flex_div>div>p{
   margin: 0;
 }
 
@@ -89,4 +91,33 @@
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.watch_list{
+  width: 35vw;
+  height: 80vh;
+  background-color: rgb(26,29,48);
+  border: 2px solid black;
+  border-top: none;
+  margin: auto;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.watch_list::-webkit-scrollbar{
+  width: 15px;
+}
+
+.watch_list::-webkit-scrollbar-track{
+  background-color:rgb(26,29,48);
+}
+
+.watch_list::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 25px;
+}
+
+.watch_list>span{
+  color: white;
+  font-size: 17px;
 }
