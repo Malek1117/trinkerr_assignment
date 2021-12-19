@@ -32,7 +32,6 @@
   max-height: 50vh;
   position:absolute;
   background-color:#45A3F7;
-  border-top: 1px solid white;
 }
 
 .search_data::-webkit-scrollbar{
@@ -53,7 +52,7 @@
   color: white;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   padding: 10px 1vw;
 }
 
@@ -117,7 +116,7 @@
   border-radius: 25px;
 }
 
-.watch_list>span{
+.watch_list>span, .watch_list>h3{
   color: white;
   font-size: 17px;
 }

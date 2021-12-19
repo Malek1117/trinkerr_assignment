@@ -6,7 +6,8 @@ export default function WatchList(){
 
     return(
         <div className="watch_list">
-            {watchList.length===0?<span>Watch list is empty...!!!</span>:watchList.map((e, i)=><Element key={i} data={e} />)}
+            <h3>Watch List</h3>
+            {watchList.length===0?<span>Empty...!!!</span>:watchList.map((e, i)=><Element key={i} data={e} />)}
         </div>
     )
 }
