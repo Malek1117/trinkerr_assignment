@@ -29,12 +29,9 @@ function App() {
       return false;
     }
 
-    let temp = data.filter((e)=>{
-      let flag = e[0].split('::')[0];
-      if(flag.includes(str.toUpperCase())){
-        return e;
-      }
-    });
+    let temp = data.filter((e)=>e[0].split('::')[0].includes(str.toUpperCase()));
+
+    console.log(temp);
     
     setStock(temp);
   }
@@ -43,10 +40,11 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <h1>Maintain_watchlist</h1>
+      <div className="main">
         <input type="text" className="search" onChange={(e)=>optimizeFn(e.target.value)} placeholder="Search stocks here..." />
-        <div>
-          {stocks.map((e)=><SearchEl data={e} />)}
+        <div className="search_data">
+          {stocks.map((e, i)=><SearchEl key={i} data={e} />)}
         </div>
       </div>
     </div>
