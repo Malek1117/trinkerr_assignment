@@ -29,7 +29,7 @@ function App() {
       return false;
     }
 
-    let temp = data.filter((e)=>e[0].split('::')[0].includes(str.toUpperCase()));
+    let temp = data.filter((e)=>e[0].split('::')[0].includes(str.trim().toUpperCase()));
 
     console.log(temp);
     
